@@ -42,7 +42,7 @@ nnoremap <C-F12> :wq <CR>
 inoremap <C-BS>	<C-W>
 
 syntax on
-colorscheme desert
+colorscheme elflord 
 
 " necessary for plugin manager vundle
 set nocompatible              " be iMproved, required
