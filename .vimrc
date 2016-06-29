@@ -44,6 +44,13 @@ inoremap <C-BS>	<C-W>
 syntax on
 colorscheme elflord 
 
+"Nerd Commenter Plugin
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
 " necessary for plugin manager vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -62,6 +69,9 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 
 " Autocomplete words with tab
 Plugin 'https://github.com/ervandew/supertab'
+
+" Commenter
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
