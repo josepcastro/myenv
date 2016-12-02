@@ -10,9 +10,28 @@
     ui = true
     pager = true
 
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "status"]
+	added = green
+	changed = yellow
+    untracked = cyan
+
 [url "https://bitbucket.org/"]
         insteadOf = bb:
 
 [url "https://github.com/"]
         insteadOf = gh:
 
+[push]
+	default = simple
