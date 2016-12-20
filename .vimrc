@@ -32,14 +32,11 @@ set foldlevelstart=10                   " open most folds by default
 set foldnestmax=10                      " 10 nested fold max
 
 " move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+nnoremap <F1> :call NERDComment(0,"toggle") <CR>
 nnoremap <F7> :tabp <CR>
 nnoremap <F8> :tabn <CR>
 nnoremap <F12> :w <CR>
 nnoremap <C-F12> :wq <CR>
-
-inoremap <C-BS>	<C-W>
 
 syntax on
 colorscheme elflord 
