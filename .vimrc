@@ -37,6 +37,7 @@ nnoremap <F7> :tabp <CR>
 nnoremap <F8> :tabn <CR>
 nnoremap <F12> :w <CR>
 nnoremap <C-F12> :wq <CR>
+nnoremap <C-D> @:<CR>
 
 syntax on
 colorscheme elflord 
