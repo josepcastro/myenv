@@ -4,7 +4,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ln -s ~/repos/myenv/.gitconfig ~/.gitconfig
 ln -s ~/repos/myenv/.vimrc ~/.vimrc
-ln -s ~/repos/myenv/.zshrc ~/.zshrc
+ln -s ~/repos/myenv/.bashrc ~/.bashrc
 
-sudo apt-get -y install zsh
-chsh -s $(which zsh)

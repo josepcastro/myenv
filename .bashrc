@@ -1,40 +1,12 @@
 #!/bin/zsh
 
-#idioma teclat
-setxkbmap us -variant altgr-intl
-
 #$PATH with sudo binarys
 export PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
-
-# prompt
-PS1="%F{green}%T%f %d"$'\n'""
-autoload -U promptinit && promptinit
-
-# completion
-autoload -U compinit 
-compinit
-
-# correction
-#setopt correctall
-
-# If I could disable Ctrl-s completely I would!
-setopt NO_FLOW_CONTROL
-
-# beeps are annoying
-setopt NO_BEEP
 
 # history
 export HISTSIZE=2000 
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-
-# prevent "cd /etc" you can type "/etc" 
-setopt autocd
-
-# enable cp *.(tar|bz2)
-setopt extendedglob
 
 # my alias
 alias ls='ls --color=auto'
@@ -63,15 +35,4 @@ alias cd..='cd ..'
 alias off='sudo shutdown -h now'
 alias pronterface='python ~/Documents/3D/soft/Printrun/pronterface.py'
 alias slic3r='~/Documents/3D/soft/Slic3r/bin/slic3r'
-
-
-# Quick find
-f() {
-    echo "find . -iname \"*$1*\""
-    find . -iname "*$1*"
-}
-
-insert_sudo () { zle beginning-of-line; zle -U "sudo " }
-zle -N insert-sudo insert_sudo
-bindkey "^[s" insert-sudo
 

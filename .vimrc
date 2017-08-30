@@ -33,6 +33,7 @@ set foldnestmax=10                      " 10 nested fold max
 
 " move vertically by visual line
 nnoremap <F1> :call NERDComment(0,"toggle") <CR>
+nnoremap <F2> :set invpaste paste?<CR>
 nnoremap <F7> :tabp <CR>
 nnoremap <F8> :tabn <CR>
 nnoremap <F12> :w <CR>
