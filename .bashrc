@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+#$PS1 the command prompt
+export PS1="[\u@\h ]\$PWD$ "
+
 #$PATH with sudo binarys
 export PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin
 
@@ -32,7 +35,4 @@ alias gm='git merge'
 alias gft='git fetch'
 alias gdf='git diff --color'
 alias cd..='cd ..'
-alias off='sudo shutdown -h now'
-alias pronterface='python ~/Documents/3D/soft/Printrun/pronterface.py'
-alias slic3r='~/Documents/3D/soft/Slic3r/bin/slic3r'
 
