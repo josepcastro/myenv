@@ -22,7 +22,7 @@ alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias gad='git add'
 alias gcm='git commit'
 alias gs='git status'
-alias glg='git log --format="%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s" --graph --decorate --color --all'
+alias glg='git log --format="%C(yellow)%h %Cblue%ad %Cgreen%aN %Cred%d %Creset%s" --graph --decorate --color --all --date=short'
 alias gps='git push'
 alias gpl='git pull'
 alias gbr='git branch'
@@ -34,5 +34,13 @@ alias grm='git remote'
 alias gm='git merge'
 alias gft='git fetch'
 alias gdf='git diff --color'
+alias glist='git show --pretty="" --name-only'
 alias cd..='cd ..'
 
+function findOcurrences() {
+	if [ -z "$1" ]; then
+		echo "Usage: $0 [ocurrences]";
+		return
+	fi
+	find -O3 . -regex '.*\.\(c\|cpp\|h\)$' -exec grep $1 -sl '{}' \;
+}
