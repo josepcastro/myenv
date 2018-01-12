@@ -44,3 +44,12 @@ function findOcurrences() {
 	fi
 	find -O3 . -regex '.*\.\(c\|cpp\|h\)$' -exec grep $1 -sl '{}' \;
 }
+
+function findOcurrencesDetailed() {
+	if [ -z "$1" ]; then
+		echo "Usage: $0 [ocurrences]";
+		return
+	fi
+
+	find ./ -iname "*" -type f -print0  |  xargs -0 grep -H "$1"
+}
