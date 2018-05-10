@@ -1,9 +1,12 @@
 syntax enable                           " enable syntax processing
 
 set tabstop=4                           " number of visual spaces per TAB
+
 set shiftwidth=4						" when indenting with >, use 4 spaces
 
 set softtabstop=4                       " number of spaces in tab when editing
+
+set expandtab							" expand tabs to spaces
 
 set number                              " show line numbers
 
