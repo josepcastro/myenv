@@ -6,7 +6,6 @@ alias la='ls -A'
 alias cd..='cd ..'
 alias grep='grep --color=auto'
 alias biggest='find -type f -printf '\''%s %p\n'\'' | sort -nr | head -n 40 | gawk "{ print \$1/1000000 \" \" \$2 \" \" \$3 \" \" \$4 \" \" \$5 \" \" \$6 \" \" \$7 \" \" \$8 \" \" \$9 }"'
-alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 
 # git alias
 alias gad='git add'

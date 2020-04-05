@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 #$PS1 the command prompt
 export PS1="[\u@\h ]\$PWD$ "
